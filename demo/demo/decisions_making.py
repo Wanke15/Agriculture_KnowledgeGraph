@@ -1,8 +1,8 @@
 from django.shortcuts import render
 import json
 import os
-from toolkit.img_match import get_similar_entity
-from toolkit.pre_load import neo_con
+from demo.toolkit.img_match import get_similar_entity
+from demo.toolkit.pre_load import neo_con
 
 relationCountDict = {}
 filePath = os.path.abspath(os.path.join(os.getcwd(),"."))

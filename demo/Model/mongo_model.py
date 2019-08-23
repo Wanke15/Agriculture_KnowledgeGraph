@@ -4,18 +4,19 @@ import os
 import pymongo
 from pymongo import MongoClient
 
+
 class Mongo():
-	clent = None
-	db = None
-	collection = None
-	def makeConnection(self):
-		self.client = MongoClient('localhost',27017)
+    clent = None
+    db = None
+    collection = None
 
-	def getDatabase(self,dbName):
-		self.db = self.client[dbName]
-		return self.db
+    def makeConnection(self):
+        self.client = MongoClient('localhost', 27017)
 
-	def getCollection(self,collectionName):
-		self.collection = self.db[collectionName]
-		return self.collection
+    def getDatabase(self, dbName):
+        self.db = self.client[dbName]
+        return self.db
 
+    def getCollection(self, collectionName):
+        self.collection = self.db[collectionName]
+        return self.collection
